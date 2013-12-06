@@ -1,6 +1,6 @@
 {
   "name": "rlotranslate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility to manage translations in multi-lingual, angularjs-based web applications.",
   "main": "lib",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@bitbucket.org/cflynn_us/rlotranslate.git"
+    "url": "https://bitbucket.org/fcninjas/rlo.tool.translate"
   },
   "author": {
     "name": "Casey Flynn",
@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "optimist": "~0.6.0",
-    "coffee-script": "~1.6.3",
     "exec-sync": "~0.1.6",
     "underscore": "~1.5.2",
     "csv": "~0.3.6"
