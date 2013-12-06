@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/fcninjas/rlo.tool.translate"
+    "url": "ssh://git@bitbucket.org:fcninjas/rlo.tool.translate.git"
   },
   "author": {
     "name": "Casey Flynn",
