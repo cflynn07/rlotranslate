@@ -12,14 +12,19 @@ clean-docs:
 	rm -rf docs/
 
 clean:
-	rm -rf lib/
-	rm -rf bin/
+	mv bin/wrapper.js bin/wrapper.tmp
+	find ./bin/  -name '*.js' -type f | xargs rm -f
+	mv bin/wrapper.tmp bin/wrapper.js
+	find ./lib/  -name '*.js' -type f | xargs rm -f
+	find ./test/ -name '*.js' -type f | xargs rm -f
+	rm -rf ./test/data
 
 build:
+	cp -R ./src/test/data ./test/data
 	coffee -o ./ -c src/
 
-build-watch:
-  coffee -w -o ./ -c src/
+build-watch: build
+	coffee -w -o ./ -c src/
 
 dist: clean init build test
 
