@@ -1,0 +1,37 @@
+{
+  "name": "rlotranslate",
+  "version": "1.0.2",
+  "description": "Utility to manage translations in multi-lingual, angularjs-based web applications.",
+  "main": "lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "lib/install.sh",
+    "prepublish": "lib/install.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.org:fcninjas/rlo.tool.translate.git"
+  },
+  "author": {
+    "name": "Casey Flynn",
+    "email": "casey.flynn@rakutenloyalty.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/bower/bower/blob/master/LICENSE"
+    }
+  ],
+  "bin": {
+    "rlotranslate": "bin/wrapper.js"
+  },
+  "dependencies": {
+    "optimist": "~0.6.0",
+    "exec-sync": "~0.1.6",
+    "underscore": "~1.5.2",
+    "csv": "~0.3.6"
+  },
+  "devDependencies": {
+    "buster": "~0.7.6"
+  }
+}

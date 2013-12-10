@@ -1,0 +1,9 @@
+.idea
+.log
+.dump
+.DS_Store
+
+node_modules/
+/bin/
+/lib/
+/test/
