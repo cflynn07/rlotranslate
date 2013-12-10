@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "optimist": "~0.6.0",
+    "coffee-script": "~1.6.3",
     "exec-sync": "~0.1.6",
     "underscore": "~1.5.2",
     "csv": "~0.3.6"
