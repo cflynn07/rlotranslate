@@ -1,3 +1,9 @@
-.idea/
+.idea
+.log
+.dump
+.DS_Store
+
 node_modules/
-lib/npm-debug.log
+/bin/
+/lib/
+/test/
