@@ -3,6 +3,6 @@
 .dump
 .DS_Store
 .md
+.csv
 
-/spec/
 /src/

@@ -13,25 +13,30 @@ clean-docs:
 
 clean:
 	rm -rf node_modules/
-	mv bin/wrapper.js bin/wrapper.tmp
-	find ./bin/  -name '*.js' -type f | xargs rm -f
-	mv bin/wrapper.tmp bin/wrapper.js
-	find ./lib/  -name '*.js' -type f | xargs rm -f
-	find ./test/ -name '*.js' -type f | xargs rm -f
-	rm -rf ./test/data
+	mv build/bin/wrapper.js build/bin/wrapper.tmp
+	find .build/bin/  -name '*.js' -type f | xargs rm -f
+	mv ./build/bin/wrapper.tmp ./build/bin/wrapper.js
+	find .build/lib/  -name '*.js' -type f | xargs rm -f
+	find .build/test/ -name '*.js' -type f | xargs rm -f
+	rm -rf ./build/test/data
 
 build:
-	npm install
-	cp -R ./src/test/data ./test/data
-	coffee -o ./ -c src/
+	test -d ./node_modules || npm install
+	cp -R ./src/test/data ./build/test/data
+	coffee -o ./build/ -c src/
 
-build-watch: build
-	coffee -w -o ./ -c src/
+build-watch:
+	test -d ./node_modules || npm install
+	cp -R ./src/test/data ./build/test/data
+	coffee -w -o ./build/ -c src/
 
 dist: clean init build test
 
 test:
 	echo "TODO: TESTS"
 
+publish-local:
+	make build
+	npm install . -g
 publish: dist
 	npm publish

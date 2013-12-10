@@ -2,10 +2,9 @@
   "name": "rlotranslate",
   "version": "1.0.2",
   "description": "Utility to manage translations in multi-lingual, angularjs-based web applications.",
-  "main": "lib/index.js",
+  "main": "build/lib/index.js",
   "scripts": {
     "test": "make test",
-    "install": "make build",
     "prepublish": "make build"
   },
   "repository": {
@@ -23,7 +22,7 @@
     }
   ],
   "bin": {
-    "rlotranslate": "bin/wrapper.js"
+    "rlotranslate": "build/bin/wrapper.js"
   },
   "dependencies": {
     "optimist": "~0.6.0",

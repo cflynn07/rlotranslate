@@ -24,7 +24,7 @@ if options.h
   process.exit 0
 
 if options.v
-  console.log require('../package').version
+  console.log require('../../package').version
   process.exit 0
 
 switch command
