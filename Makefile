@@ -12,6 +12,7 @@ clean-docs:
 	rm -rf docs/
 
 clean:
+	rm -rf node_modules/
 	mv bin/wrapper.js bin/wrapper.tmp
 	find ./bin/  -name '*.js' -type f | xargs rm -f
 	mv bin/wrapper.tmp bin/wrapper.js
@@ -20,6 +21,7 @@ clean:
 	rm -rf ./test/data
 
 build:
+	npm install
 	cp -R ./src/test/data ./test/data
 	coffee -o ./ -c src/
 
