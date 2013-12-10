@@ -14,6 +14,9 @@ module.exports = (path, file, command, options) ->
   #  de: 2 ...}
   languageObjectsIndexes = {}
 
+  # This changes as the script moves down the lines of the CSV file
+  # After each point the script assumes it's dealing with a different
+  # set of data and behaves differently in the .on('record'... calback
   mode                   = ''
 
   csv()
@@ -40,7 +43,7 @@ module.exports = (path, file, command, options) ->
         languageObjects[valLanguageCode] =
           language: {}
           lexicon:
-            language: 'default'
+            language: valLanguageCode
             country:  null
             entries:  []
         languageObjectsIndexes[valLanguageCode] = i - 1
